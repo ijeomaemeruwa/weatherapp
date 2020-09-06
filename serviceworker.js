@@ -5,9 +5,9 @@ self.addEventListener('install', (event) => {
     .then(function(cache) {
      cache.addAll([
        '/',
-       '../html/index.html',
-       '../app.js',
-       '../style.css',
+       './html/index.html',
+       'app.js',
+       'style.css',
        'icons',
        'https://kit.fontawesome.com/3d62637f3e.js'
      ]); 
