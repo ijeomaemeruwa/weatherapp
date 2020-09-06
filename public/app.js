@@ -7,7 +7,6 @@ const weatherIcon = document.querySelector('#weather-icon');
 const temperature = document.querySelector('#temperature-info');
 const description = document.querySelector('#weather-description');
 
-// App data
 const weather = {};
 
 weather.temperature = {
@@ -29,6 +28,7 @@ const getValue = async() => {
     weather.iconId = data.weather[0].icon;
     weather.city = data.name;
     weather.country = data.sys.country
+    weather.date = new Date(data.timezone).toDateString();
 
     displayWeather()
 };
@@ -36,6 +36,7 @@ const getValue = async() => {
 //Display weather info to the DOM
 function displayWeather() {
     currentLocation.innerHTML = `${weather.city}, ${weather.country}`
+    timezone.innerHTML = weather.date;
     weatherIcon.innerHTML = `<img src="icons/${weather.iconId}.png"/>;`
     temperature.innerHTML = `${weather.temperature.value}°<span>C</span>`;
     description.innerHTML = weather.description;
@@ -61,6 +62,15 @@ function convertTemperature() {
         weather.temperature.unit = "celsius"
     }
 }
+
+if('serviceworker' in navigator) {
+    navigator.serviceWorker.register('serviceworker.js')
+    .then(function() {
+        console.log('SW Registered')
+    });
+}
+
+
 
 searchValue.addEventListener('click', getValue);
 temperature.addEventListener('click', convertTemperature);

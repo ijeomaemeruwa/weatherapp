@@ -1,0 +1,31 @@
+{
+    "name": "Smash It Weather PWA",
+    "short_name": "Smash It",
+    "start_url": ".",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#0000ea",
+    "theme_color": "#e5ecf4",
+    "icons": [
+        {
+            "src": "icons/cloud.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/cloud.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/cloud.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/cloud.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

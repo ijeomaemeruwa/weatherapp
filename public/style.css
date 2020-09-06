@@ -42,6 +42,7 @@ img {
 .search-city .enter-search {
     width: 350px;
     height: 40px;
+    margin-top: 1rem;
     position: relative;
 }
 
@@ -64,7 +65,7 @@ img {
     height: 40px;
     width: 80px;
     color: var(--text-color);
-    background: var(--secondary-color);
+    background: #0000ea;;
     line-height: 50px;
     font-size: 20px;
     text-align: center;
@@ -90,7 +91,8 @@ img {
 }
 
 .timezone {
-    font-size: 1.5rem
+    font-size: 1rem;
+    color: #0000ea;
 }
 
 .temperature {
@@ -106,4 +108,5 @@ img {
     font-size: 1rem;
     font-weight: bold;
     letter-spacing: 1px;
+    color: #0000ea;
 }
