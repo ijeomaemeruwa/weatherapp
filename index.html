@@ -13,36 +13,22 @@
 <section>
  <div class="search-city">
      <div class="enter-search">
-     <input id="input" type="text" placeholder="Enter City..">
+     <input id="input" type="text" placeholder="Enter Search..">
      <div class="search-button">
-        <i class="fas fa-search-location"></i>
+        <i class="fas fa-search-location" id="search-btn"></i>
      </div>
     </div>
  </div> 
 </section>
 
- <!--Country, Day and Date-->
+ <!--Weather Information-->
 <section>
- <div>
-    <div id="city"></div>
-    <div id="day-date">
-    
-    </div>
- </div>
-</section>
-
- <!--Weather Image-->
-<section>
- <div id="weather-img">
-
- </div>
-</section>
-
-<!--City weather description and temperature-->
-<section>
- <div>
-     <div id="description"></div>
-     <div id="temperature"></div>
+ <div class="container">
+    <div id="location" class="city">-</div>
+    <div id="timezone-info" class="timezone">-</div>
+    <div id="weather-icon" class="weather-img"><img src="icons/unknown.svg"></div>
+    <div id="temperature-info" class="temperature">-°<span>C</span></div>
+    <div id="weather-description" class="description">description</div>    
  </div>
 </section>
 
