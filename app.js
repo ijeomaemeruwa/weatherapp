@@ -27,15 +27,16 @@ const getValue = async() => {
     weather.description = data.weather[0].description;
     weather.iconId = data.weather[0].icon;
     weather.city = data.name;
-    weather.country = data.sys.country
-    weather.date = new Date(data.timezone).toDateString();
+    weather.date = new Date(data.id).toDateString();
+    weather.wind = data.wind.speed;
+    weather.sunrise = data.sys.sunrise;
 
     displayWeather()
 };
 
 //Display weather info to the DOM
 function displayWeather() {
-    currentLocation.innerHTML = `${weather.city}, ${weather.country}`
+    currentLocation.innerHTML = weather.city;
     timezone.innerHTML = weather.date;
     weatherIcon.innerHTML = `<img src="icons/${weather.iconId}.png"/>;`
     temperature.innerHTML = `${weather.temperature.value}°<span>C</span>`;
@@ -47,7 +48,7 @@ function celsiusToFahrenheit(temperature){
     return (temperature * 9/5) + 32;
 }
 
-//On click convert to Fahrenheit
+//On click, convert to Fahrenheit
 function convertTemperature() {
     if(weather.temperature.value === undefined) return;
     
@@ -63,6 +64,7 @@ function convertTemperature() {
     }
 }
 
+//Register Service workers
 if('serviceworker' in navigator) {
     navigator.serviceWorker.register('serviceworker.js')
     .then(function() {
@@ -70,7 +72,6 @@ if('serviceworker' in navigator) {
     });
 }
 
-
-
+//Event Listeners
 searchValue.addEventListener('click', getValue);
 temperature.addEventListener('click', convertTemperature);
