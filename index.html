@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GADS2020 Weather App</title>
     <script src="https://kit.fontawesome.com/3d62637f3e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
-    <title>GADS2020 Weather App</title>
+    
 </head>
 <body>
 
 <!--Country/City Search-->
-<nav>
-<div>
-    <h2>SMASH IT</h2>
-    <a href="#">View Search</a>
+<nav class="navbar">
+<div class="nav-container">
+ <h4>Weather App</h4>
 </div>
 </nav>
 
@@ -22,14 +22,15 @@
  <div class="search-city">
      <div class="enter-search">
      <input id="input" type="text" placeholder="Enter Search..">
-     <div class="search-button">
-        <i class="fas fa-search-location" id="search-btn"></i>
-     </div>
     </div>
+     <div class="search-button">
+     <button type="submit" id="search-btn">SEARCH</button>
+         <!--<button class="fas fa-search-location" id="search-btn"></button>-->
+     </div>  
  </div> 
 </section>
 
- <!--Weather Information-->
+<!--Weather Information-->
 <section>
  <div class="container">
     <div id="location" class="city">-</div>
@@ -40,7 +41,7 @@
  </div>
 </section>
 
-<!--Weather information for the week-->
+<!--local storage-->
 <footer>
  <div>
      <div id="weekly-data">

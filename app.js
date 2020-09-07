@@ -66,10 +66,12 @@ function convertTemperature() {
 
 //Register Service workers
 if('serviceworker' in navigator) {
-    navigator.serviceWorker.register('serviceworker.js')
-    .then(function() {
-        console.log('SW Registered')
-    });
+    window.addEventListener('load', () => {
+        navigator.serviceWorker
+        .register('serviceworker.js')
+        .then(res => console.log('Service worker registered'))
+        .catch(err => console.log('Service weorker not registered', err))
+    })   
 }
 
 //Event Listeners

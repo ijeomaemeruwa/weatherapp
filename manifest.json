@@ -1,9 +1,9 @@
 {
     "name": "Smash It Weather PWA",
     "short_name": "Smash It",
-    "start_url": ".",
+    "start_url": "index.html",
     "display": "standalone",
-    "orientation": "portrait",
+    "orientation": "portrait-primary",
     "background_color": "#0000ea",
     "theme_color": "#e5ecf4",
     "icons": [

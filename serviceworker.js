@@ -1,14 +1,15 @@
-self.addEventListener('install', (event) => {
-    console.log('SW Installed');
-    event.waitUntil(
-        caches.open('static')
-    .then(function(cache) {
+self.addEventListener('install', installEvent => {
+    console.log('Service Worker Installed');
+
+    installEvent.waitUntil(
+    caches.open('static')
+    .then(cache => {
      cache.addAll([
        '/',
-       './html/index.html',
+       'index.html',
        'app.js',
        'style.css',
-       'icons',
+       '/icons',
        'https://kit.fontawesome.com/3d62637f3e.js'
      ]); 
     })
@@ -17,19 +18,15 @@ self.addEventListener('install', (event) => {
 
 
 self.addEventListener('activate', () => {
-    console.log('SW Activated');
+    console.log('Service Worker Activated');
 })
 
 
-self.addEventListener('fetch', (e) => {
-  e.respondWith(
-   caches.match(e.request)
-   .then(function(res) {
-       if(res) {
-           return res;
-       } else {
-           return fetch(e.request);
-       }
+self.addEventListener('fetch', fetchEvent => {
+  fetchEvent.respondWith(
+   caches.match(fetchEvent.request)
+   .then(res => {
+      return res || fetch(fetchEvent.request)
    })
   );
 });
