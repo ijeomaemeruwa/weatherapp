@@ -24,6 +24,7 @@ body {
 
 img {
     width: 250px;
+    margin-bottom: 15px;
 }
 
 .navbar {
@@ -31,26 +32,10 @@ img {
     color: var(--primary-color);
 }
 
-.navbar .nav-container {
-    display: flex;
+h4 {
+    padding: 10px;
     text-align: center;
 }
-
-.navbar a {
-    color: var(--text-color);
-}
-
-.heading {
-    background: var(--secondary-color);
-    color: var(--primary-color);
-}
-
-/*
-.search-city {
-    display: grid;
-    place-items: center;
-}
-*/
 
 .search-city {
     display: flex;
@@ -79,15 +64,23 @@ img {
     padding: 0 60px 0 20px;
 }
 
-.enter-search .search-button {
-    height: 30px;
-    width: 100px;
+button {
+    height: 40px;
+    width: 80px;
     color: var(--primary-color);
+    border: none;
+    border-radius: 20px;
     background: #0000ea;
     text-align: center;
-    border-radius: 20px;
     cursor: pointer;
     letter-spacing: 1px;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+button:hover {
+    background: #1bbcfd;
+    color: #fff;
 }
 
 
@@ -118,6 +111,7 @@ img {
 .temperature {
     font-size: 4rem;
     cursor: pointer;
+    margin-bottom: 15px;
 }
 
 .temperature:hover {
@@ -129,6 +123,26 @@ img {
     font-weight: bold;
     letter-spacing: 1px;
     color: #0000ea;
+    margin-bottom: 15px;
+}
+
+/* Local Storage */
+.storage-container {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-gap: 20px;
+}
+
+.stored-info {
+    padding: 20px;
+    border: 1px solid #d5d5d5;
+    text-align: center;
+    height: 100px;
+    width: 150px;
+}
+
+a {
+    text-align: left;
 }
 
 @media screen and (max-width) {
@@ -161,3 +175,4 @@ img {
         margin-top: 5px;
     }
 }
+
