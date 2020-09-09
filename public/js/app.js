@@ -5,7 +5,9 @@ const currentLocation = document.querySelector('#location');
 const weatherIcon = document.querySelector('#weather-icon');
 const temperature = document.querySelector('#temperature-info');
 const description = document.querySelector('#weather-description');
-const storedResults = document.querySelector('#city-data')
+const storedResults = document.querySelector('#city-data');
+const speedValue = document.querySelector('#speed');
+const humidity = document.querySelector('#humidity');
 
 const weather = {};
 
@@ -14,6 +16,7 @@ weather.temperature = {
 }
 
 const CONVERT = 273; //Convert To Celcius
+
 
 // Fetch Api with search button
 const getValue = async(e) => {
@@ -28,39 +31,26 @@ const getValue = async(e) => {
     weather.description = data.weather[0].description;
     weather.iconId = data.weather[0].icon;
     weather.city = data.name;
-    //weather.date = new Date(data.timezone).toDateString();
+
+    localStorage.setItem('results', searchData);
     
     displayWeather()
-
-    /*if(searchData) {
-        localStorage.setItem('results', searchData);
-    }*/
-
     storeWeatherInfo();
 };
 
-
-//Local Storage
-/*
-function storeWeatherInfo()  {
-    if(localStorage.getItem('results')) {
-        let searchResults = localStorage.getItem('results');
-
-        storedResults.innerHTML = 
-          `
-          <div class="stored-data">
-          <h3>${weather.city}</h3>
-          <small>${weather.description}</small>
-          </div>
-          `
+function storeWeatherInfo() {
+    let storage;
+    if (localStorage.getItem('results') === null) {
+        storage = [];
+    } else {
+        storage = JSON.parse(localStorage.getItem('storage'));
     }
 }
-*/
 
 //Display weather info to the DOM
 function displayWeather() {
     currentLocation.innerHTML = weather.city;
-    weatherIcon.innerHTML = `<img src="icons/${weather.iconId}.png" alt="icon"/>;`
+    weatherIcon.innerHTML = `<img src="/images/icons/${weather.iconId}.png" alt="icon"/>;`
     temperature.innerHTML = `${weather.temperature.value}°<span>C</span>`;
     description.innerHTML = weather.description;
 }

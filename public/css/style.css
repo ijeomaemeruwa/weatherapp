@@ -24,7 +24,8 @@ body {
 
 img {
     width: 250px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    margin-top: 15px;
 }
 
 .navbar {
@@ -70,6 +71,7 @@ button {
     color: var(--primary-color);
     border: none;
     border-radius: 20px;
+    outline: none;
     background: #0000ea;
     text-align: center;
     cursor: pointer;
@@ -98,15 +100,10 @@ button:hover {
 /* Weather information */
 .city {
     font-size: 3rem;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     color: var(--secondary-color);
 }
 
-.timezone {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #0000ea;
-}
 
 .temperature {
     font-size: 4rem;
@@ -126,23 +123,24 @@ button:hover {
     margin-bottom: 15px;
 }
 
-/* Local Storage */
-.storage-container {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-gap: 20px;
-}
 
-.stored-info {
-    padding: 20px;
-    border: 1px solid #d5d5d5;
+.offline-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    height: 100px;
-    width: 150px;
+    margin: auto;
+    height: 100vh;
 }
 
-a {
-    text-align: left;
+.offline-message h4, 
+.offline-message p {
+   color: #313745;
+}
+
+.offline-message a {
+    color: #0000ea;
 }
 
 @media screen and (max-width) {

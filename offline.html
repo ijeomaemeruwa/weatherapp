@@ -5,19 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge" />
     <script src="https://kit.fontawesome.com/3d62637f3e.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="manifest" href="/manifest.json">
     <!--IOS support-->
-    <link rel="apple-touch-icon" href="/icons/cloud.png" sizes="72x72" />
-    <link rel="apple-touch-icon" href="/icons/cloud.png" sizes="96x96" />
-    <link rel="apple-touch-icon" href="/icons/cloud.png" sizes="128x128" />
-    <link rel="apple-touch-icon" href="/icons/cloud.png" sizes="144x144" />
-    <link rel="apple-touch-icon" href="/icons/cloud.png" sizes="152x152" />
-    <link rel="apple-touch-icon" href="/icons/cloud.png" sizes="192x192" />
-    <link rel="apple-touch-icon" href="/icons/cloud.png" sizes="384x384" />
-    <link rel="apple-touch-icon" href="/icons/cloud.png" sizes="512x512" />
-    <meta name="apple-mobile-web-app-status-bar" content="#0000ea">
-    <meta name="theme-color" content="#0000ea" />
+    <link rel="apple-touch-icon" href="/images/logo/cloud-72x72.png" />
+    <link rel="apple-touch-icon" href="/images/logo/cloud-128x128.png" />
+    <link rel="apple-touch-icon" href="/images/logo/cloud-256x256.png" />
+    <link rel="apple-touch-icon" href="/images/logo/cloud-512x512.png" />
+    <meta name="apple-mobile-web-app-status-bar" content="#e5ecf4">
+    <meta name="theme-color" content="#e5ecf4" />
     <!--Title-->
     <title>Smash-It Weather App</title>
 </head>
@@ -46,7 +42,7 @@
 <section>
  <div class="container">
     <div id="location" class="city">-</div>
-    <div id="weather-icon" class="weather-img"><img src="/icons/unknown.svg" alt="weather icon"></div>
+    <div id="weather-icon" class="weather-img"><img src="/images/icons/unknown.png" alt="weather icon"></div>
     <div id="temperature-info" class="temperature">-°<span>C</span></div>
     <div id="weather-description" class="description">-</div>    
  </div>
@@ -59,9 +55,16 @@
         <a href="#" class="clear-list-item">X</a>
      </div>
  </div>
-</footer> 
+</footer>
 
-<script src="./js/sw.js"></script>
-<script src="./js/app.js"></script>
+<!--Offline-->
+<div class="offline-message">
+<h4>You're Offline...</h4>
+<p>Connect to the internet to view page.</p><br>
+<a href="/index.html">Go To Home Page</a>
+</div>
+
+<script src="/public/js/register.js"></script>
+<script src="/public/js/app.js"></script>
 </body>
 </html>

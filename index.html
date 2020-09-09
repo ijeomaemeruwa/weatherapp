@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge" />
+    <script src="https://kit.fontawesome.com/3d62637f3e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="manifest" href="/manifest.json">
+    <!--IOS support-->
+    <link rel="apple-touch-icon" href="/images/logo/cloud-72x72.png" />
+    <link rel="apple-touch-icon" href="/images/logo/cloud-96x96.png" />
+    <meta name="apple-mobile-web-app-status-bar" content="#e5ecf4">
+    <meta name="theme-color" content="#e5ecf4" />
+    <!--Title-->
+    <title>Smash-It Weather App</title>
+</head>
+<body>
+    
+<!--Country/City Search-->
+<nav class="navbar">
+<div class="nav-container">
+ <h4>Get Weather</h4>
+</div>
+</nav>
+
+<section>
+ <div class="search-city">
+     <div class="enter-search">
+     <input id="input" type="text" placeholder="Enter City/Country..">
+    </div>
+     <div class="search-button">
+     <button type="submit" id="search-btn">SEARCH</button>
+     </div>  
+ </div> 
+</section>
+
+<!--Weather Information-->
+<section>
+ <div class="container">
+    <div id="location" class="city">Location</div>
+    <div id="weather-icon" class="weather-img"><img src="/images/icons/unknown.png" alt="weather icon"></div>
+    <div id="temperature-info" class="temperature">°<span>C</span></div>
+    <div id="weather-description" class="description">Description</div>    
+ </div>
+</section>
+
+
+<script src="/public/js/register.js"></script>
+<script src="/public/js/app.js"></script>
+</body>
+</html>
