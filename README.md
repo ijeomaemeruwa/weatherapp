@@ -1,5 +1,5 @@
 # weatherapp
 A progressive web app to display weather information.
 
-#Demo
+## Demo
 [getweather app](https://getweather-app.web.app)
