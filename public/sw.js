@@ -1,5 +1,5 @@
-const staticWeatherCache = "site-static-v20";
-const dynamicWeatherCache = "site-dynamiv-v19";
+const staticWeatherCache = "site-static-03";
+const dynamicWeatherCache = "site-dynamic-03";
 
 
 const assets = [
