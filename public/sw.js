@@ -1,14 +1,14 @@
-const staticWeatherCache = "site-static-v16";
-const dynamicWeatherCache = "site-dynamiv-v15";
+const staticWeatherCache = "site-static-v20";
+const dynamicWeatherCache = "site-dynamiv-v19";
 
 
 const assets = [
   '/',
   '/index.html',
   '/offline.html',
-  '/public/css/style.css',
-  '/public/js/app.js',
-  '/public/js/sw.js',
+  '/css/style.css',
+  '/js/app.js',
+  '/js/sw.js',
   '/images/icons/01d.png',
   '/images/icons/01n.png',
   '/images/icons/02d.png',
@@ -28,7 +28,6 @@ const assets = [
   '/images/icons/50n.png',
   '/images/icons/unknown.png',
   '/images/icons/unknown.svg',
-  'https://kit.fontawesome.com/3d62637f3e.js',
   'https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap'
 ]
 

@@ -6,8 +6,7 @@ const weatherIcon = document.querySelector('#weather-icon');
 const temperature = document.querySelector('#temperature-info');
 const description = document.querySelector('#weather-description');
 const storedResults = document.querySelector('#city-data');
-const speedValue = document.querySelector('#speed');
-const humidity = document.querySelector('#humidity');
+
 
 const weather = {};
 
@@ -50,7 +49,7 @@ function storeWeatherInfo() {
 //Display weather info to the DOM
 function displayWeather() {
     currentLocation.innerHTML = weather.city;
-    weatherIcon.innerHTML = `<img src="/images/icons/${weather.iconId}.png" alt="icon"/>;`
+    weatherIcon.innerHTML = `<img src="/images/icons/${weather.iconId}.png" alt="icon"/>`
     temperature.innerHTML = `${weather.temperature.value}°<span>C</span>`;
     description.innerHTML = weather.description;
 }
@@ -75,10 +74,6 @@ function convertTemperature() {
         weather.temperature.unit = "celsius"
     }
 }
-
-
-
-
 
 //Event Listeners
 searchValue.addEventListener('click', getValue);
